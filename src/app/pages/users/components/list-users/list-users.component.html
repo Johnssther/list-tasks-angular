@@ -1,0 +1,28 @@
+<div *ngIf="!listEmployees.length" class="alert alert-warning">
+  <i>No existen usuarios registrados </i>
+</div>
+<div class="card" *ngIf="listEmployees.length">
+  <div class="card-header">
+    Lista de usuarios
+  </div>
+  <div class="card-body">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Código</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Profesión</th>
+          <th scope="col">Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of listEmployees; let i = index">
+          <th scope="row">{{ i+1 }}</th>
+          <td class="text-capitalize">{{ item.name }}</td>
+          <td class="text-capitalize">{{ item.position }}</td>
+          <td>{{ item.email }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

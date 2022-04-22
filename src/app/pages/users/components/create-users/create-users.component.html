@@ -1,0 +1,28 @@
+<div class="card">
+  <div class="card-header">
+    Crear usuario
+  </div>
+  <div class="card-body">
+    <div class="alert alert-info">
+      <ul>
+        <li><i class="text-capitalize">{{ name }}</i></li>
+        <li><i class="text-capitalize">{{ position }}</i></li>
+        <li><i>{{ email }}@sufijo.com</i></li>
+      </ul>
+    </div>
+    <div class="mb-3">
+      <label for="name" class="form-label">Nombre</label>
+      <input type="text" class="form-control" id="name" [(ngModel)]="name">
+    </div>
+    <div class="mb-3">
+      <label for="position" class="form-label">Posición</label>
+      <input type="text" class="form-control" id="position" [(ngModel)]="position">
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Usuario</label>
+      <input type="text" class="form-control" id="email" [(ngModel)]="email">
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="addUser()">Registrar</button>
+    <button type="submit" class="btn btn-secondary" (click)="navegateToCustomers()">Clientes</button>
+  </div>
+</div>

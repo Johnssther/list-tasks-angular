@@ -1,0 +1,60 @@
+<div class="card">
+  <div class="card-header">
+    Crear Prospecto
+  </div>
+  <div class="card-body">
+    <div class="alert alert-success" style="font-size: 14px;" *ngIf="this.formProspect.valid">
+      <i>Muy bien! </i>
+      <i class="bi bi-check-lg"></i>
+    </div>
+    <div class="alert alert-danger" style="font-size: 14px;" *ngIf="this.formProspect.invalid">
+      <ul>
+        <li  *ngIf="this.formProspect.get('email')?.errors?.['required']"><i class="text-capitalize">El campo email no puede quedar vacío</i></li>
+        <li  *ngIf="this.formProspect.get('email')?.errors?.['email']"><i class="text-capitalize">El email no es valido</i></li>
+        <li  *ngIf="this.formProspect.get('observations')?.errors?.['required']"><i class="text-capitalize">El campo observaciones, no puede quedar vacio</i></li>
+      </ul>
+    </div>
+    <form [formGroup]="formProspect" (ngSubmit)="onSubmit()" class="needs-validation" novalidate>
+      <div class="form-group">
+        <label for="name" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="name" formControlName="name">
+      </div>
+      <div class="form-group">
+        <label for="surname" class="form-label">Apellido</label>
+        <input type="text" class="form-control" id="surname" formControlName="surname">
+      </div>
+      <div class="form-group">
+        <label for="age" class="form-label">Edad</label>
+        <input type="text" class="form-control" id="age" formControlName="age">
+      </div>
+      <div class="form-group">
+        <label for="direction" class="form-label">Direccion</label>
+        <input type="text" class="form-control" id="direction" formControlName="direction">
+      </div>
+      <div class="form-group">
+        <label for="phone" class="form-label">Telefono</label>
+        <input type="text" class="form-control" id="phone" formControlName="phone">
+      </div>
+      <div class="form-group">
+        <label for="company" class="form-label">Compañia</label>
+        <input type="text" class="form-control" id="company" formControlName="company">
+      </div>
+      <div class="form-group">
+        <label for="position" class="form-label">Posicion</label>
+        <input type="text" class="form-control" id="position" formControlName="position">
+      </div>
+      <div class="form-group">
+        <label for="email" class="form-label">Email</label>
+        <input type="text" class="form-control" id="email" formControlName="email">
+      </div>
+      <div class="form-group">
+        <label for="observations" class="form-label">Observaciones</label>
+        <input type="text" class="form-control" id="observations" formControlName="observations">
+      </div>
+      <div>
+        <!-- <input type="reset" value="Limpiar" class="btn btn-secondary mt-1 col-sm-5 m-2"> -->
+        <input type="submit" value="Enviar" class="btn btn-primary mt-1 col-sm-5 m-2" [disabled]="formProspect.invalid">
+      </div>
+    </form>
+  </div>
+</div>
