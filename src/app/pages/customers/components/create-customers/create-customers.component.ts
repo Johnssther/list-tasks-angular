@@ -15,11 +15,11 @@ export class CreateCustomersComponent implements OnInit {
     private _customerService: CustomerService
   ) {
     this.formCustomer = new FormGroup({
-      name: new FormControl('stefania aguilar'),
-      surname: new FormControl('aguilar'),
-      company: new FormControl('cencosud'),
-      phone: new FormControl('3219193161'),
-      email: new FormControl('ms.aguilar@cencosud.com'),
+      name: new FormControl(),
+      surname: new FormControl(),
+      company: new FormControl(),
+      phone: new FormControl(),
+      email: new FormControl(),
       link_image: new FormControl('https://cdn.pixabay.com/photo/2014/04/03/10/32/user-310807__340.png'),
     })
   }
