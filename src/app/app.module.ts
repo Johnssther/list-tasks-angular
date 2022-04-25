@@ -10,6 +10,7 @@ import { UsersModule } from './pages/users/users.module'
 import { CustomersModule } from './pages/customers/customers.module';
 import { ProspectsModule } from './pages/prospects/prospects.module';
 import { HomeModule } from './pages/home/home.module';
+import { ExpensesModule } from './pages/expenses/expenses.module';
 
 @NgModule({
   declarations: [
@@ -24,14 +25,16 @@ import { HomeModule } from './pages/home/home.module';
     UsersModule,
     CustomersModule,
     ProspectsModule,
-    HomeModule
+    HomeModule,
+    ExpensesModule
   ],
   exports:[
     CoreModule,
     UsersModule,
     CustomersModule,
     ProspectsModule,
-    HomeModule
+    HomeModule,
+    ExpensesModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
