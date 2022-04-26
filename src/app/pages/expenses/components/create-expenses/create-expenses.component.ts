@@ -28,6 +28,6 @@ export class CreateExpensesComponent implements OnInit {
   }
 
   onSubmit(): void {
-
+    console.log(this.formExpense.value);
   }
 }

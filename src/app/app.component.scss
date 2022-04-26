@@ -1,8 +1,8 @@
-$primary: #dcdc1a;
+$primary: white;
 nav {
   // background-color: #dcdc1a!important;
   background-color: $primary!important;
-  height: 3.5rem;
+  height: 5.5rem;
 }
 .buy {
     background-color: aliceblue;
@@ -12,4 +12,8 @@ nav {
     text-align: center;
     line-height: 2rem;
     font-weight: bold;
+}
+
+input {
+  border-radius: 1rem;
 }
