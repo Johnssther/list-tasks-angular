@@ -1,5 +1,5 @@
-<div class="card">
-  <div class="card-header">
+<!-- <div class="card">
+  <div class="card-header bg-info text-white">
     Registrar Gasto
   </div>
   <div class="card-body">
@@ -12,15 +12,6 @@
         <label for="type_expense" class="form-label">Tipo de gasto</label>
         <input type="text" class="form-control" id="type_expense" formControlName="type_expense">
       </div>
-      <!-- <div class="form-group">
-        <label for="type_expense" class="form-label">Tipo de gasto</label>
-        <select class="form-select" aria-label="Default select example">
-          <option selected>Open this select menu</option>
-          <option value="1">One</option>
-          <option value="2">Two</option>
-          <option value="3">Three</option>
-        </select>
-      </div> -->
       <div class="form-group">
         <label for="count" class="form-label">Cantidad</label>
         <input type="text" class="form-control" id="count" formControlName="count">
@@ -41,5 +32,60 @@
         <input type="submit" value="Enviar" class="btn btn-primary mt-1 col-sm-5 m-2">
       </div>
     </form>
+  </div>
+</div> -->
+
+
+
+<!-- Button trigger modal -->
+<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  <i class="bi bi-plus" style="font-size: 22px;"></i>
+   Crear gasto
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Crear Gasto</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="formExpense" (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <label for="date" class="form-label">Fecha</label>
+            <input type="date" class="form-control" id="date" formControlName="date">
+          </div>
+          <div class="form-group">
+            <label for="type_expense" class="form-label">Tipo de gasto</label>
+            <input type="text" class="form-control" id="type_expense" formControlName="type_expense">
+          </div>
+          <div class="form-group">
+            <label for="count" class="form-label">Cantidad</label>
+            <input type="text" class="form-control" id="count" formControlName="count">
+          </div>
+          <div class="form-group">
+            <label for="name_expense" class="form-label">Nombre del gasto</label>
+            <input type="text" class="form-control" id="name_expense" formControlName="name_expense">
+          </div>
+          <div class="form-group">
+            <label for="price_unit" class="form-label">Precio unidad</label>
+            <input type="text" class="form-control" id="price_unit" formControlName="price_unit">
+          </div>
+          <div class="form-group">
+            <label for="price_total" class="form-label">Precio total</label>
+            <input type="text" class="form-control" id="price_total" formControlName="price_total"
+              placeholder="Precio total">
+          </div>
+          <div>
+            <input type="submit" value="Enviar" class="btn btn-primary mt-1 col-sm-5 m-2">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
   </div>
 </div>

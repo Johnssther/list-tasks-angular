@@ -26,7 +26,7 @@ import { ExpensesModule } from './pages/expenses/expenses.module';
     CustomersModule,
     ProspectsModule,
     HomeModule,
-    ExpensesModule
+    ExpensesModule,
   ],
   exports:[
     CoreModule,

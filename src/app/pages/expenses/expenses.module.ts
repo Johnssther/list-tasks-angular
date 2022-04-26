@@ -18,7 +18,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     ReactiveFormsModule
   ],
   exports: [
-    ExpensesComponent
+    ExpensesComponent,
   ]
 })
 export class ExpensesModule { }
