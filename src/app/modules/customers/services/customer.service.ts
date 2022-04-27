@@ -1,14 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Subject, Observable } from 'rxjs';
-
-export interface Customer {
-  name: string,
-  surname: string,
-  company: string,
-  phone: string,
-  email: string,
-  link_image: string,
-}
+import { Customer } from 'src/app/models/customer.model';
 
 @Injectable({
   providedIn: 'root'

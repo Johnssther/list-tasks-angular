@@ -6,11 +6,11 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 
 import { CoreModule } from './core/core.module';
-import { UsersModule } from './pages/users/users.module'
-import { CustomersModule } from './pages/customers/customers.module';
-import { ProspectsModule } from './pages/prospects/prospects.module';
-import { HomeModule } from './pages/home/home.module';
-import { ExpensesModule } from './pages/expenses/expenses.module';
+import { UsersModule } from './modules/users/users.module'
+import { CustomersModule } from './modules/customers/customers.module';
+import { ProspectsModule } from './modules/prospects/prospects.module';
+import { HomeModule } from './modules/home/home.module';
+import { ExpensesModule } from './modules/expenses/expenses.module';
 
 @NgModule({
   declarations: [

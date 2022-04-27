@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CustomersComponent } from './pages/customers/customers.component';
-import { ExpensesComponent } from './pages/expenses/expenses.component';
-import { HomeComponent } from './pages/home/home.component';
-import { ProspectsComponent } from './pages/prospects/prospects.component';
-import { UsersComponent } from './pages/users/users.component';
+import { BlogComponent } from './modules/blog/blog.component';
+import { CustomersComponent } from './modules/customers/customers.component';
+import { ExpensesComponent } from './modules/expenses/expenses.component';
+import { HomeComponent } from './modules/home/home.component';
+import { ProspectsComponent } from './modules/prospects/prospects.component';
+import { UsersComponent } from './modules/users/users.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -13,6 +14,10 @@ const routes: Routes = [
   { path: 'customers', component: CustomersComponent },
   { path: 'prospects', component: ProspectsComponent },
   { path: 'expenses', component: ExpensesComponent },
+  { path: 'blog', component: BlogComponent },
+
+  { path: 'ordenes', loadChildren: () => import('./modules/ordenes/ordenes.module').then(m => m.OrdenesModule) },
+  { path: '**', redirectTo: '' },
 ];
 
 @NgModule({
